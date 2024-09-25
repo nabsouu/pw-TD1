@@ -7,9 +7,14 @@ console.log(helloworld()); */
 import {helloyou} from "./hello-funcs"; 
 console.log(helloyou("John")); */
 
-/*5
-import { helloHuman } from './hello-funcs';
+
+import  {helloHuman}from './hello-funcs';
 import type { Human } from './types';
+import {helloyou} from "./hello-funcs"; 
+import { repeatHelloYou } from "./hello-funcs";
+
+
+/*console.log(repeatHelloYou(5,"nabou"));*/
 
 const johnDoe: Human = {
     firstname: "John",
@@ -17,7 +22,25 @@ const johnDoe: Human = {
     birthyear: 1980
 };
 
-console.log(helloHuman(johnDoe)); */
+/*console.log(helloHuman(johnDoe)); */
 
-import { repeatHelloYou } from "./hello-funcs";
-console.log(repeatHelloYou(5,"nabou")); 
+
+
+try {
+    console.log(helloyou("Alice"));
+  } catch (error) {
+    console.error("Error in helloYou:", error);
+  }
+  
+  try {
+    console.log(helloHuman(johnDoe));
+  } catch (error) {
+    console.error("Error in helloHuman:", error);
+  }
+  
+  try {
+    console.log(repeatHelloYou(3,"John"));
+  } catch (error) {
+    console.error("Error in repeatHelloYou:", error);
+  }
+  
